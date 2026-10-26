@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: simulador_trading_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME:?Define DB_NAME en .env}
+      POSTGRES_USER: ${DB_USER:?Define DB_USER en .env}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Define DB_PASSWORD en .env}
+    ports:
+      - "${POSTGRES_HOST_PORT:-5433}:5432"
+    volumes:
+      - postgres_datos:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_datos:
