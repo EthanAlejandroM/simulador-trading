@@ -1,0 +1,18 @@
+# Configuración general del simulador.
+tickers:
+  - AAPL
+  - MSFT
+  - NVDA
+  - KO
+  - JPM
+  - TSLA
+
+datos:
+  # yfinance acepta "1y". La descarga se hace una vez y se guarda en CSV.
+  periodo_descarga: "1y"
+  intervalo: "1d"
+  archivo_csv: "data/precios_historicos.csv"
+
+simulacion:
+  dias_habiles: 30
+  capital_inicial: 100000
