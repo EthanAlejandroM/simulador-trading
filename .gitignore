@@ -2,6 +2,7 @@
 __pycache__/
 *.py[codz]
 *$py.class
+*.py[cod]
 
 # C extensions
 *.so
@@ -218,3 +219,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Resultados generados.
+output/*
+!output/.gitkeep

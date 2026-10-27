@@ -1,0 +1,22 @@
+tickers:
+  - AAPL
+  - MSFT
+  - NVDA
+  - KO
+  - JPM
+  - TSLA
+
+datos:
+  periodo_descarga: "1y"
+  intervalo: "1d"
+  archivo_csv: "data/precios_historicos.csv"
+
+simulacion:
+  dias_habiles: 30
+  capital_inicial: 100000
+
+ollama:
+  modelo: "llama3.2:3b"
+  host: "http://localhost:11434"
+  temperatura: 0.1
+  num_predict: 400
