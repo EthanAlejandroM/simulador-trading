@@ -1,0 +1,6 @@
+﻿puesto,agente_id,agente,estrategia,dias_simulados,fecha_inicio,fecha_final,capital_inicial,valor_final,retorno_total_pct,volatilidad_anual_pct,sharpe,drawdown_maximo_pct
+1,11,Comprar y mantener,BUY_AND_HOLD,30,2026-09-15,2026-10-26,100000.0,103489.82,3.4898,11.4279,2.578,-2.0919
+2,8,Agente agresivo,AGRESIVO,30,2026-09-15,2026-10-26,100000.0,100000.0,0.0,0.0,0.0,0.0
+3,9,Agente especulador,ESPECULADOR,30,2026-09-15,2026-10-26,100000.0,100000.0,0.0,0.0,0.0,0.0
+4,10,Gestor de riesgo,GESTOR_RIESGO,30,2026-09-15,2026-10-26,100000.0,100000.0,0.0,0.0,0.0,0.0
+5,7,Agente conservador,CONSERVADOR,30,2026-09-15,2026-10-26,100000.0,99827.42,-0.1726,0.5854,-2.4758,-0.229
