@@ -600,10 +600,13 @@ def mostrar_agentes():
         valor_posiciones = 0.0
         ganancia_no_realizada = 0.0
     else:
-        posiciones["precio_actual"] = pd.to_numeric(
-            posiciones["precio_actual"],
-            errors="coerce",
-        ).fillna(0)
+        # PostgreSQL devuelve las columnas NUMERIC como Decimal. Convierte
+        # las tres columnas antes de combinarlas con valores float de pandas.
+        for columna in ("cantidad", "costo_promedio", "precio_actual"):
+            posiciones[columna] = pd.to_numeric(
+                posiciones[columna],
+                errors="coerce",
+            ).fillna(0.0)
 
         posiciones["valor_mercado"] = (
             posiciones["cantidad"] * posiciones["precio_actual"]
