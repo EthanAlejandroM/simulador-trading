@@ -220,9 +220,6 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-#sql
-sql/
-
 # Resultados generados.
 output/*
 !output/.gitkeep
