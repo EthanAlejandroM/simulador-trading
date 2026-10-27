@@ -1,4 +1,3 @@
-# Configuración general del simulador.
 tickers:
   - AAPL
   - MSFT
@@ -8,7 +7,6 @@ tickers:
   - TSLA
 
 datos:
-  # yfinance acepta "1y". La descarga se hace una vez y se guarda en CSV.
   periodo_descarga: "1y"
   intervalo: "1d"
   archivo_csv: "data/precios_historicos.csv"
@@ -16,3 +14,9 @@ datos:
 simulacion:
   dias_habiles: 30
   capital_inicial: 100000
+
+ollama:
+  modelo: "llama3.2:3b"
+  host: "http://localhost:11434"
+  temperatura: 0.1
+  num_predict: 400
